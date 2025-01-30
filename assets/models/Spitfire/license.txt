@@ -1,0 +1,11 @@
+Model Information:
+* title:	Spitfire 1.0
+* source:	https://sketchfab.com/3d-models/spitfire-10-70c9b0d464ed49bb8a30a650fe71eb10
+* author:	graphix (https://sketchfab.com/graphix)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Spitfire 1.0" (https://sketchfab.com/3d-models/spitfire-10-70c9b0d464ed49bb8a30a650fe71eb10) by graphix (https://sketchfab.com/graphix) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
