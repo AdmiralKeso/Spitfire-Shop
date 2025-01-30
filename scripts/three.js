@@ -5,14 +5,14 @@ function init() {
     scene = new THREE.Scene();
     
     //Camera (PerspectiveCamera)
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000);
     
     //Canvas
     renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("myCanvas") });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight,);
 
     //background color
-    scene.background = new THREE.Color(0x000000);
+    scene.background = new THREE.Color(0x00052e);
     
     //lighting
     const light = new THREE.AmbientLight(0x404040, 9);  // Ambient light
@@ -28,7 +28,7 @@ function init() {
     loader.load('assets/models/Spitfire/scene.gltf', function(gltf) {
         model = gltf.scene;
         scene.add(model);
-        model.rotation.x = 0.4;
+        model.rotation.x = 0.5;
         model.position.set(0, 0, 0);
         animate(); // Start the animation loop
     }, undefined, function(error) {
@@ -36,7 +36,7 @@ function init() {
     });
 
     // Adjust camera position
-    camera.position.z = 4;
+    camera.position.z = 4.5;
 }
 
 // Animation loop to rotate the model
