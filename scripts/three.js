@@ -55,6 +55,16 @@ function onWindowResize() {
     resizeModel();
 }
 
+//Window rezise based on screen size
+function resizeModel() {
+    if (model) {
+        let scaleFactor = Math.min(window.innerWidth / 800, window.innerHeight / 600);
+        let maxScale = 1.0;
+        let minScale = 0.3;
+
+        scaleFactor = Math.max(minScale, Math.min(scaleFactor, maxScale));
+        model.scale.set(scaleFactor, scaleFactor, scaleFactor);
+    }
 }
 
 // Animation loop to rotate the model
