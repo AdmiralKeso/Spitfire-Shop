@@ -49,6 +49,9 @@ function onWindowResize() {
 
     // Update renderer size
     renderer.setSize(window.innerWidth, window.innerHeight);
+    
+    // Resize model
+    resizeModel();
 }
 
 }
