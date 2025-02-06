@@ -30,6 +30,7 @@ function init() {
         scene.add(model);
         model.rotation.x = 0.5;
         model.position.set(0, 0, 0);
+        resizeModel();
         animate(); // Start the animation loop
     }, undefined, function(error) {
         console.error(error);
