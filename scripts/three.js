@@ -10,6 +10,7 @@ function init() {
     //Canvas
     renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("myCanvas") });
     renderer.setSize(window.innerWidth, window.innerHeight,);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
     //background color
     scene.background = new THREE.Color(0x00052e);
