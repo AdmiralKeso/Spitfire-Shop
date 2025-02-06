@@ -37,6 +37,20 @@ function init() {
 
     // Adjust camera position
     camera.position.z = 4.5;
+
+    window.addEventListener("resize", onWindowResize);
+}
+
+// Handle window resize
+function onWindowResize() {
+    // Update camera aspect ratio
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    // Update renderer size
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
 }
 
 // Animation loop to rotate the model
