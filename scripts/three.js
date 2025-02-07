@@ -12,8 +12,12 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight,);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    //background color
-    scene.background = new THREE.Color(0x00052e);
+    //background
+    const loaderBackground = new THREE.TextureLoader();
+    loaderBackground.load('assets/models/Spitfire/background/hangar.jpg', function(texture) {
+        scene.background = texture;
+    });
+
     
     //lighting
     const light = new THREE.AmbientLight(0x404040, 9);  // Ambient light
