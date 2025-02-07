@@ -33,7 +33,7 @@ function init() {
     loader.load('assets/models/Spitfire/scene.gltf', function(gltf) {
         model = gltf.scene;
         scene.add(model);
-        model.rotation.x = 0.5;
+        model.rotation.x = 0.4;
         model.position.set(0, 0, 0);
         resizeModel();
         animate(); // Start the animation loop
