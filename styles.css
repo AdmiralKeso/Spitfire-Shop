@@ -66,4 +66,10 @@ body {
 #info {
     text-align: center;
 }
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: solid 2px rgb(49, 49, 49);
 }
