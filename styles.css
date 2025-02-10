@@ -10,7 +10,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
     background-color: rgb(255, 255, 255);
     border-bottom: solid 2px rgb(49, 49, 49);
     width: 100%;
