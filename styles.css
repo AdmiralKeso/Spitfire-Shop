@@ -63,4 +63,7 @@ body {
 #video {
     width: 100%;
 }
+#info {
+    text-align: center;
+}
 }
