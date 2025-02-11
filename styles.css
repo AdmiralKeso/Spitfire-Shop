@@ -2,6 +2,10 @@ body {
     margin: 0;
     padding: 0;
 }
+.margin {
+    max-width: 1600px;
+    margin: 0 auto;
+}
 #myCanvas {
     width: 100% !important;
     height: 100% !important;
