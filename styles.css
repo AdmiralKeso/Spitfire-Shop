@@ -60,13 +60,8 @@ body {
         justify-content: center;
         flex-direction: column;
     }
-<<<<<<< HEAD
     #info {
         text-align: center;
-=======
-    #search-bar {
-        margin: 10px 0 10px 0;
->>>>>>> 3f797c4ddc4edf0a5212fceeeafa448d00d74538
     }
 }
 @media (max-width: 600px) {
