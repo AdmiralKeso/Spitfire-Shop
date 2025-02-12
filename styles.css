@@ -94,7 +94,12 @@ body {
 #design-cards .card .choice .toggle-btn.pressed {
     background-color: #000000;
 }
+#design-cards .card .choice .toggle-price {
+    display: none;
     text-align: center;
+}
+#design-cards .card .choice .toggle-price.update {
+    display: block;
 }
 #footer {
     display: flex;
