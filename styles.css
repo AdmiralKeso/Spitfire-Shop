@@ -83,6 +83,17 @@ body {
     display: grid;
     grid-template-columns: 200px auto 1fr;
 }
+#design-cards .card .choice .toggle-btn {
+    background-color: #ffffff;
+    border: solid 1px black;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+#design-cards .card .choice .toggle-btn.pressed {
+    background-color: #000000;
+}
     text-align: center;
 }
 #footer {
