@@ -101,6 +101,10 @@ body {
 #design-cards .card .choice .toggle-price.update {
     display: block;
 }
+#info {
+    font-size: 1vw;
+    margin-left: 25px;
+}
 #footer {
     display: flex;
     justify-content: center;
