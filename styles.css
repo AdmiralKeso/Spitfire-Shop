@@ -68,7 +68,6 @@ body {
 #video {
     width: 100%;
 }
-#info {
 #design-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
