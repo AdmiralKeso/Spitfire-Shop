@@ -93,9 +93,21 @@ body {
 #design-cards .card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    font-size: 20px;
-    margin-left: 20px;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgb(222, 222, 222);
+    font-size: 18px;
+}
+#design-cards .card .card-title {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
 }
 #design-cards .card .choice {
     display: grid;
