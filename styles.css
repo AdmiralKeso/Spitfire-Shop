@@ -78,8 +78,6 @@ body {
 #design-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: rgba(180, 180, 180, 0.64);
-    padding: 20px;
 }
 #design-cards .card {
     display: flex;
