@@ -95,7 +95,8 @@ body {
 #design-cards .card .choice .toggle-btn {
     background-color: #ffffff;
     border: solid 1px black;
-    padding: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 50%;
     transition: background-color 0.5s, transform 0.5s;
