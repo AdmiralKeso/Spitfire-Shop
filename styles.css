@@ -116,7 +116,10 @@ body {
 }
 #design-cards .card .choice {
     display: grid;
-    grid-template-columns: 200px auto 1fr;
+    grid-template-columns: 200px auto 70px;
+    width: 90%;
+    align-items: center;
+}
 }
 #design-cards .card .choice .toggle-btn {
     background-color: #ffffff;
