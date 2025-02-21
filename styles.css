@@ -120,6 +120,12 @@ body {
     width: 90%;
     align-items: center;
 }
+@media (max-width: 600px) {
+    #design-cards .card .choice {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 #design-cards .card .choice .toggle-btn {
     background-color: #ffffff;
