@@ -83,6 +83,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 5px 0 20px 0;
 }
+@media (max-width: 1200px) {
+    #design-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 #design-cards .card {
     display: flex;
