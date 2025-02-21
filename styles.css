@@ -78,6 +78,11 @@ body {
 #design-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px 0 20px 0;
+}
 }
 #design-cards .card {
     display: flex;
