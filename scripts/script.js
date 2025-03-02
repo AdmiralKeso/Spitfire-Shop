@@ -33,8 +33,11 @@ function handleButton1To3(button, price) {
 
 // Event listeners for all other buttons (4–9)
 buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        button.classList.toggle('pressed');
-        prices[index].classList.toggle('update');
-    });
+    if (index > 2) {
+        button.addEventListener('click', () => {
+            button.classList.toggle('pressed');
+            prices[index].classList.toggle('update');
+        });
+    }
 });
+
