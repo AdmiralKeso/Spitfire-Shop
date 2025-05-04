@@ -3,6 +3,7 @@ const prices = document.querySelectorAll('.toggle-price');
 const button1 = document.getElementById("color-1");
 const button2 = document.getElementById("color-2");
 const button3 = document.getElementById("color-3");
+const totalAmount = document.getElementById("totalAmount");
 
 // Event listeners for buttons 1, 2, and 3
 button1.addEventListener('click', () => handleButton1To3(button1, prices[0]));
@@ -29,6 +30,7 @@ function handleButton1To3(button, price) {
         button.classList.add('pressed');
         price.classList.add('update');
     }
+    updateTotal();
 }
 
 // Event listeners for all other buttons (4–9)
@@ -37,7 +39,18 @@ buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             button.classList.toggle('pressed');
             prices[index].classList.toggle('update');
+            updateTotal();
         });
     }
 });
 
+function updateTotal() {
+    let total = 0;
+    prices.forEach(price => {
+        if (price.classList.contains('update')) {
+            total += parseFloat(price.dataset.price) || 0;
+        }
+    });
+    totalAmount.textContent = `$${total.toFixed(2)}`;
+}
+updateTotal();
