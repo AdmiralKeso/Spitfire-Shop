@@ -150,6 +150,23 @@ body {
     font-size: 1vw;
     margin-left: 25px;
 }
+
+#total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(222, 222, 222);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#total #total-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
 #footer {
     display: flex;
     justify-content: center;
