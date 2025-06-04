@@ -23,21 +23,26 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-height: 120px;
+    height: 120px;
     padding: 10px 0 10px 0;
-    background-color: white;
+    background-color: rgb(255, 239, 223);
     color: #000000;
-    border-bottom: solid 8px rgb(124, 124, 0);
+    border-bottom: solid 8px #7c7c00;
 }
 #title {
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 #logo {
-    width: 180px;
+    width: 220px;
     padding: 0 20px 0 20px;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
 }
 #menu-items {
     display: flex;
@@ -48,13 +53,22 @@ body {
 .item {
     padding-right: 15px;
     padding-left: 15px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    border-bottom: solid 4px #7c7c00;
+}
+.item:hover {
+    color: rgb(109, 109, 109);
+}
+@media (max-width: 2250px) {
+    #logo {
+        width: 150px;
+        top: 70px;
+    }
 }
 @media (max-width: 1200px) {
     .item {
         font-size: 3vw;
-    }
-    #logo {
-        width: 10vw;
     }
     #title {
         font-size: 1vw;
@@ -65,6 +79,10 @@ body {
     }
     #info {
         text-align: center;
+    }
+    #logo {
+        width: 70px;
+        top: 115px;
     }
 }
 @media (max-width: 600px) {
@@ -150,7 +168,7 @@ body {
     align-items: center;
     padding: 10px;
     gap: 10px;
-    background-color: white;
+    background-color: rgb(255, 239, 223);
     font-size: 18px;
 }
 @media (max-width: 1200px) {
@@ -182,7 +200,7 @@ body {
     }
 }
 #design-cards .card .choice .toggle-btn {
-    background-color: #ffffff;
+    background-color: rgb(255, 239, 223);
     border: solid 1px black;
     width: 40px;
     height: 40px;
@@ -209,7 +227,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 239, 223);
     padding: 20px;
     margin-bottom: 20px;
     color: #000000;
@@ -228,7 +246,7 @@ body {
     align-items: center;
     flex-direction: column;
     border-top: solid 2px rgb(49, 49, 49);
-    background-color: white;
+    background-color: rgb(255, 239, 223);
     color: #000000;
     border-top: solid 8px rgb(124, 124, 0);
 }
