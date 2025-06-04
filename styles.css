@@ -36,13 +36,15 @@ body {
     font-size: 1.5vw;
 }
 #logo {
-    width: 220px;
+    width: 180px;
     padding: 0 20px 0 20px;
     position: absolute;
-    top: 25px;
+    top: 50px;
     z-index: 1;
   left: 50%;
   transform: translate(-50%);
+  transition: width 0.6s ease;
+  transition: top 0.6s ease;
 }
 #menu-items {
     display: flex;
@@ -56,14 +58,16 @@ body {
     transition: color 0.3s ease;
     cursor: pointer;
     border-bottom: solid 4px #7c7c00;
+    text-decoration: none;
+    color: rgb(52, 52, 52);
 }
 .item:hover {
     color: rgb(109, 109, 109);
 }
 @media (max-width: 2250px) {
     #logo {
-        width: 150px;
-        top: 70px;
+        width: 130px;
+        top: 90px;
     }
 }
 @media (max-width: 1200px) {
@@ -134,6 +138,12 @@ body {
     transition: opacity 0.5s ease;
 }
 
+.overlay .link {
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    position: absolute;
+    bottom: 30;
+}
 @media (max-width: 1800px) {
     .overlay {
         font-size: 1.3vw;

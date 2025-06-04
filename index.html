@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spitfire Shop</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
-        integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,9 +14,10 @@
             <h1>SPITFIRE STORE</h1>
         </div>
         <div id="menu-items">
-            <div class="item">Home</div>
-            <div class="item">Contact us</div>
-            <div class="item">Gallery</div>
+            <a class="item" href="index.html">Home</a>
+            <a class="item">Gallery</a>
+            <a class="item" href="designer.html">Spitfire Designer</a>
+            <a class="item">Contact us</a>
         </div>
     </header>
 
@@ -35,6 +32,7 @@
                  With its speed, agility, and cutting-edge design, the Spitfire played a crucial role in the Battle of Britain.
                   As outnumbered RAF pilots took to the skies, the Spitfire’s performance helped hold off the German Luftwaffe,
                    turning the tide of the war and proving that air superiority could change history.</p>
+            <a href="https://sv.wikipedia.org/wiki/Supermarine_Spitfire" target="_blank" class="link"><span style="color: yellow;">> </span>Read more about why the spitfire was the most iconic fighter</a>
         </div>
     </div>
     <div class="card-column">
@@ -55,91 +53,6 @@
     </div>
     </div>
 </div>
-
-<div id="info">
-    <h2>SPITFIRE DESIGNER</h2>
-</div>
-<canvas id="myCanvas"></canvas>
-<div id="design-cards">
-    <div class="card">
-        <div class="card-title">
-        <h3>COLOR PICKER</h3>
-        <a href="https://www.flaticon.com/free-icons/fix" title="fix icons" target="_blank"> 
-        <img src="assets/images/icons/brush.png" alt="brush" style="width: 30px; margin-left: 4px;">
-        </a>
-    </div>
-        <div class="choice">
-            <p>CAMOUFLAGE</p>
-            <button class="toggle-btn" id="color-1"></button>
-            <p class="toggle-price" data-price="1500">1500€</p>
-        </div>
-        <div class="choice">
-            <p>BLACK</p>
-            <button class="toggle-btn" id="color-2"></button>
-            <p class="toggle-price" data-price="1000">1000€</p>
-        </div>
-        <div class="choice">
-            <p>WHITE</p>
-            <button class="toggle-btn" id="color-3"></button>
-            <p class="toggle-price" data-price="1000">1000€</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-title">
-            <h3>EQUIPMENT</h3>
-            <a href="https://www.flaticon.com/free-icons/weapon" title="weapon icons" target="_blank">
-            <img src="assets/images/icons/bullet.png" alt="bullet" style="width: 30px; margin-left: 4px;">
-        </a>
-        </div>
-        <div class="choice">
-            <p>+ CANON UPGRADE</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1500">1500€</p>
-        </div>
-        <div class="choice">
-            <p>+ GUN UPGRADE</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1000">1000€</p>
-        </div>
-        <div class="choice">
-            <p>+ FLARES</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1000">1000€</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-title">
-            <h3>FRAME</h3>
-            <a href="https://www.flaticon.com/free-icons/repair" title="repair icons" target="_blank">
-            <img src="assets/images/icons/tools.png" alt="tools" style="width: 30px; margin-left: 4px;">
-        </a>
-        </div>
-        <div class="choice">
-            <p>+ WING UPGRADE</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1500">1500€</p>
-        </div>
-        <div class="choice">
-            <p>+ FRAME UPGRADE</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1500">1000€</p>
-        </div>
-        <div class="choice">
-            <p>+ ENGINE UPGRADE</p>
-            <button class="toggle-btn"></button>
-            <p class="toggle-price" data-price="1500">1000€</p>
-        </div>
-    </div>
-</div>
-
-<div id="total">
-    <div id="total-text">
-<p>Total Amount:</p>
-<div id="totalAmount"></div>
-</div>
-<div>Checkout</div>
-</div>
-
 
 </div>
     <footer id="footer">
