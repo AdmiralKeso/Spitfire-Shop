@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('assets/images/background/background.jpg');
+    background-image: url('assets/images/background/clouds.jpg');
     background-size: cover;
     color: white;
 }
@@ -28,6 +28,7 @@ body {
     background-color: rgb(255, 239, 223);
     color: #000000;
     border-bottom: solid 8px #7c7c00;
+    margin-bottom: 150px;
 }
 #title {
     display: flex;
@@ -235,7 +236,7 @@ body {
 .card-container-des {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: rgb(185, 185, 152);
+    background-color: rgb(175, 175, 129);
     color: #000000;
     width: 100%;
     height: auto;
@@ -244,6 +245,13 @@ body {
 }
 .card-container-des .card-des {
     border: 1px solid rgb(99, 99, 99);
+    padding: 10px;
+    font-size: 1vw;
+}
+@media (min-width: 1500px) {
+    .card-container-des .card-des {
+        font-size: 15px;
+    }
 }
 #total {
     display: flex;
