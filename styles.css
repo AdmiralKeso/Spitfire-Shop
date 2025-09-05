@@ -11,8 +11,20 @@ body {
 }
 
 .margin {
-    max-width: 1800px;
+    max-width: 1500px;
     margin: 0 auto;
+}
+@media (max-width: 1800px) {
+    .margin {
+    max-width: 80%;
+    margin: 0 auto;
+}
+}
+@media (max-width: 600px) {
+    .margin {
+    max-width: 100%;
+    margin: 0 auto;
+}
 }
 #myCanvas {
     width: 100% !important;
