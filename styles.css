@@ -232,7 +232,19 @@ body {
     font-size: 1vw;
     margin-left: 25px;
 }
-
+.card-container-des {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(185, 185, 152);
+    color: #000000;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-container-des .card-des {
+    border: 1px solid rgb(99, 99, 99);
+}
 #total {
     display: flex;
     justify-content: space-between;
