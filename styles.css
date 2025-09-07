@@ -40,7 +40,6 @@ body {
     background-color: rgb(255, 239, 223);
     color: #000000;
     border-bottom: solid 8px #7c7c00;
-    margin-bottom: 150px;
 }
 #title {
     display: flex;
