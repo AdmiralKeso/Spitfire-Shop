@@ -6,6 +6,34 @@ body {
     color: white;
 }
 
+#background-img {
+    width: 50%;
+}
+
+.text-box {
+    font-size: 1.5vw;
+    color: #000000;
+    width: 40%;
+    margin-bottom: 25%;
+}
+
+.margin {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+@media (max-width: 1800px) {
+    .margin {
+    max-width: 80%;
+    margin: 0 auto;
+}
+}
+@media (max-width: 600px) {
+    .margin {
+    max-width: 90%;
+    margin: 0 auto;
+}
+}
 #myCanvas {
     width: 100% !important;
     height: auto !important;
@@ -25,7 +53,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 #logo {
     width: 180px;
@@ -41,7 +69,6 @@ body {
 #menu-items {
     display: flex;
     justify-content: space-between;
-    font-size: 30px;
     padding: 0 40px 0 40px;
 }
 .item {
@@ -52,6 +79,7 @@ body {
     border-bottom: solid 4px #7c7c00;
     text-decoration: none;
     color: rgb(52, 52, 52);
+    font-size: 30px;
 }
 .item:hover {
     color: rgb(109, 109, 109);
@@ -88,6 +116,19 @@ body {
     #title {
         font-size: 2vw;
     }
+    #menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 40px 0 40px;
+}
+}
+@media (max-width: 160px) {
+    #menu-items {
+    grid-template-columns: 1fr;
+    padding: 0;
+}
 }
 
 .card-row {
@@ -95,6 +136,8 @@ body {
     grid-template-columns: 2.5fr 1fr;
     width: 100%;
     height: auto;
+    border-top: 7px solid #7c7c00;
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, 1.5);
 }
 
 .card-column {
@@ -272,4 +315,5 @@ body {
     background-color: rgb(255, 239, 223);
     color: #000000;
     border-top: solid 8px rgb(124, 124, 0);
+    position: relative;
 }
