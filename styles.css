@@ -10,13 +10,6 @@ body {
     width: 50%;
 }
 
-.text-box {
-    font-size: 1.5vw;
-    color: #000000;
-    width: 40%;
-    margin-bottom: 25%;
-}
-
 .margin {
     max-width: 80%;
     margin: 0 auto;
@@ -40,89 +33,48 @@ body {
 }
 #main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 120px;
-    padding: 10px 0 10px 0;
-    background-color: rgb(255, 239, 223);
-    color: #000000;
-    border-bottom: solid 8px #7c7c00;
+    height: 3vw;
+    padding-top: 10px;
+    padding-bottom: 30%;
+    position: relative;
 }
 #title {
     display: flex;
     align-items: center;
-    padding: 0 10px 0 10px;
+    padding: 0 3% 0 3%;
     font-size: 1vw;
-}
-#logo {
-    width: 180px;
-    padding: 0 20px 0 20px;
-    position: absolute;
-    top: 50px;
-    z-index: 1;
-  left: 50%;
-  transform: translate(-50%);
-  transition: width 0.6s ease;
-  transition: top 0.6s ease;
 }
 #menu-items {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px 0 40px;
+    border-bottom: solid 4px #7c7c00;
 }
 .item {
-    padding-right: 15px;
-    padding-left: 15px;
     transition: color 0.3s ease;
     cursor: pointer;
-    border-bottom: solid 4px #7c7c00;
     text-decoration: none;
     color: rgb(52, 52, 52);
-    font-size: 30px;
+    font-size: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 .item:hover {
     color: rgb(109, 109, 109);
 }
-@media (max-width: 2250px) {
-    #logo {
-        width: 130px;
-        top: 90px;
-    }
-}
 @media (max-width: 1200px) {
-    .item {
-        font-size: 3vw;
-    }
-    #title {
-        font-size: 1vw;
-    }
-    #main-header {
-        justify-content: center;
-        flex-direction: column;
-    }
     #info {
         text-align: center;
     }
-    #logo {
-        width: 70px;
-        top: 115px;
+    #main-header {
+    padding-top: 10px;
     }
 }
 @media (max-width: 600px) {
-    .item {
-        font-size: 4vw;
-    }
-    #title {
-        font-size: 2vw;
-    }
     #menu-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     text-align: center;
-    flex-direction: column;
-    padding: 0 40px 0 40px;
-}
+    }
 }
 @media (max-width: 160px) {
     #menu-items {
