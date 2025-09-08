@@ -40,6 +40,15 @@ body {
     padding-bottom: 30%;
     position: relative;
 }
+#secondary-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3vw;
+    padding-top: 10px;
+    position: relative;
+    background: #000000;
+}
 #title {
     display: flex;
     align-items: center;
@@ -218,8 +227,9 @@ body {
     display: block;
 }
 #info {
+    display: flex;
+    justify-content: center;
     font-size: 1vw;
-    margin-left: 25px;
 }
 .card-container-des {
     display: grid;
