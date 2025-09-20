@@ -1,5 +1,13 @@
-# Spitfire-Shop
-Welcome to the spitfire store. Here you can customize your own spitfire, read some history or look at some cool pictures. The site is made to integrate a blender model using three.js.
+WORK IN PROGRESS
+![spitfireamiresponsive](https://github.com/user-attachments/assets/99e9eeb5-4e9e-4789-be1a-3cf612482b08)
+## Deployment
 https://admiralkeso.github.io/Spitfire-Shop/
 
-![spitfireamiresponsive](https://github.com/user-attachments/assets/99e9eeb5-4e9e-4789-be1a-3cf612482b08)
+# Spitfire-Shop
+Spitfire interactive store with a 3D integrated model using 3D software. The site focuses on a clean and modern front end responsive design with a spinning model using Three.js library.
+
+## Software
+* HTML
+* CSS
+* Javascript
+* Three.js Library
