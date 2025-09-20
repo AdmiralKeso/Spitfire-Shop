@@ -1,5 +1,5 @@
 WORK IN PROGRESS
-![spitfireamiresponsive](https://github.com/user-attachments/assets/99e9eeb5-4e9e-4789-be1a-3cf612482b08)
+![spitfireamiresponsive](https://github.com/AdmiralKeso/Spitfire-Shop/blob/main/assets/images/amiresponsive.png)
 ## Deployment
 https://admiralkeso.github.io/Spitfire-Shop/
 
