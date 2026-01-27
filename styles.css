@@ -4,6 +4,7 @@ body {
     background-image: url('assets/images/background/background.jpg');
     background-size: cover;
     color: rgb(255, 255, 255);
+    border-top: solid 10px #7c7c00;
 }
 
 #background-img {
@@ -22,13 +23,30 @@ body {
 }
 @media (max-width: 600px) {
     .margin {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
 }
 }
 #myCanvas {
     width: 100% !important;
     height: auto !important;
+}
+#top-container {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 20;
+    font-size: 0.5vw;
+    color: #ffffff;
+    background: #7c7c00;
+    padding: 0 1vw 0 0.8vw;
+    border-bottom: solid 0.2vw black;
+    border-right: solid 0.1vw black;
+}
+@media (max-width: 1000px) {
+    #top-container {
+        display: none;
+}
 }
 #main-header {
     display: flex;
