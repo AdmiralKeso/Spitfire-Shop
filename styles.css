@@ -106,6 +106,7 @@ body {
     height: auto;
     border-top: 7px solid #7c7c00;
     box-shadow: 4px 10px 20px rgba(0, 0, 0, 1.5);
+    margin: 50px 0 50px 0;
 }
 
 .card-column {
