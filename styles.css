@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-image: url('assets/images/background/background.jpg');
     background-size: cover;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 #background-img {
@@ -11,13 +11,12 @@ body {
 }
 
 .margin {
-    max-width: 80%;
+    width: 70vw;
     margin: 0 auto;
     position: relative;
 }
 @media (max-width: 1800px) {
-    .margin {
-    max-width: 80%;
+.margin {
     margin: 0 auto;
 }
 }
