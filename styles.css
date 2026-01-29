@@ -57,11 +57,22 @@ body {
     position: absolute;
     top: 0;
 }
-#title {
+.main-title {
     display: flex;
     align-items: center;
     padding: 0 3% 0 3%;
     font-size: 1vw;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+}
+#head-title {
+    display: flex;
+    flex-direction: column;
+}
+#head-title h1,p {
+    margin: 0;
 }
 #menu-items {
     display: flex;
