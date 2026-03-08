@@ -30,6 +30,9 @@ html{
     display: flex;
     flex-direction: column;
 }
+#create-form > * , .content-column > *{
+    padding: 0.4vw;
+}
 #top-container {
     position: absolute;
     z-index: 1;
