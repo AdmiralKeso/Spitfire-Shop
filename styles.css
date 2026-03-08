@@ -18,9 +18,6 @@
     margin: 0 auto;
 }
 }
-#myCanvas {
-    width: 100% !important;
-    height: auto !important;
 .content-row{
     display: flex;
     justify-content: space-between;
