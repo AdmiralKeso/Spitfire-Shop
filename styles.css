@@ -21,6 +21,14 @@
 #myCanvas {
     width: 100% !important;
     height: auto !important;
+.content-row{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.content-column{
+    display: flex;
+    flex-direction: column;
 }
 #top-container {
     position: absolute;
