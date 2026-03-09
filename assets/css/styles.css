@@ -260,23 +260,6 @@ html{
         font-size: 15px;
     }
 }
-#total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 239, 223);
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #000000;
-}
-
-#total #total-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 15%;
-}
-
 #footer {
     display: flex;
     justify-content: center;
