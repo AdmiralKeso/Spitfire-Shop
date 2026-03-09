@@ -33,23 +33,6 @@ html{
 #create-form > * , .content-column > *{
     padding: 0.4vw;
 }
-#top-container {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 20;
-    font-size: 0.5vw;
-    color: #ffffff;
-    background: #7c7c00;
-    padding: 0 1vw 0 0.8vw;
-    border-bottom: solid 0.2vw black;
-    border-right: solid 0.1vw black;
-}
-@media (max-width: 1000px) {
-    #top-container {
-        display: none;
-    }
-}
 .main-header {
     display: flex;
     align-items: center;
