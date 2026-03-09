@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spitfire Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
         padding: 0;
         color: rgb(0, 0, 0);
         border-top: solid 10px #7c7c00;
-        background-image: url('assets/images/background/background.jpg');
+        background-image: url('../assets/images/background/background.jpg');
         background-size: cover;
         background-color: white;
     }
@@ -27,21 +28,21 @@
             <h2><strong>Royal <br>Air Force</strong></h2>
         </div>
     </a>
-    <img src="assets/images/background/spitfire-bannermain.jpg" alt="spitfire-banner" style="width: 100%; position: relative;">
+    <img src="../assets/images/background/spitfire-bannermain.jpg" alt="spitfire-banner" style="width: 100%; position: relative;">
 
     <header class="main-header">
         <div class="main-title">
-            <img src="assets/images/logo/logo.png" alt="Spitfire logo" style="width: 4vw;">
+            <img src="../assets/images/logo/logo.png" alt="Spitfire logo" style="width: 4vw;">
             <div id="head-title">
             <h1>Open Skies</h1>
             <p>Encyclopedia | Merch | Forum</p>
             </div>
         </div>
         <div id="menu-items">
-            <a class="item" href="index.html">Home</a>
+            <a class="item" href="/">Home</a>
             <a class="item">Gallery</a>
             <a class="item" href="https://shop.iwm.org.uk/collections/spitfire-clothing?srsltid=AfmBOoo-qoiJBwa1YP_qm4jPLXe5HnED7MspYuSpKVtRNtLR2jFDrpOj" target="_blank">Merch</a>
-            <a class="item" href="forum.html#point style="text-decoration: underline;">Forum</a>
+            <a class="item" href="/forum" style="text-decoration: underline;">Forum</a>
             <div class="item">Account</div>
             <a class="item">Other</a>
         </div>
@@ -49,7 +50,7 @@
 
 <div class="margin">
 <section class="forum-mid-section" id="point">
-    <div style="margin: 10px; background-color: antiquewhite; padding: 1vw;">
+    <div style="margin: 10px; background-color: antiquewhite;">
         <h2>Browse by topic</h2>
         <h3>World history</h3>
         <div class="margin-item" style="padding: 0.5vw;">General History</div>
@@ -58,29 +59,20 @@
         <div class="margin-item" style="padding: 0.5vw;">North American History</div>
         <div class="margin-item" style="padding: 0.5vw;">South American History</div>
     </div>
-    <div id="create-section">
+    <div style="margin: 10px; background-color: antiquewhite;">
         <div class="content-row">
-        <h2>Create a post</h2>
-        <a href="forum.html#point" alt="Back to forum">Go back</a>
+        <h2>Forums</h2>
+        <a href="/create" alt="Create forum">Create</a>
         </div>
-        <form id="create-form">
-            <div class="content-row">
-            <input type="text" placeholder="Title">
-            <select name="category">
-                <option value="General History">General History</option>
-                <option value="European History">European History</option>
-                <option value="Asian History">Asian History</option>
-                <option value="North American History">North American History</option>
-                <option value="South American History">South American History</option>
-            </select>
-            </div>
-            <div class="content-column">
-                <textarea class="textBox" style="resize: none;" rows="7"></textarea>
-                <input type="file">
-            <button style="margin: 10px; width: 15%;">+ Add section</button>
-                <input type="submit" style="width: 5vw; font-size: 0.5vw;" value="Create post">
-            </div>
-        </form>
+        <div class="padding margin-item">Forum 1</div>
+        <div class="padding margin-item">Forum 2</div>
+        <div class="padding margin-item">Forum 3</div>
+    </div>
+    <div style="margin: 10px; background-color: antiquewhite;">
+        <h2>Trending</h2>
+        <div class="margin-item">Trending 1</div>
+        <div class="margin-item">Trending 2</div>
+        <div class="margin-item">Trending 3</div>
     </div>
 </section>
 </div>
