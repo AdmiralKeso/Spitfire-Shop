@@ -49,6 +49,31 @@ html{
         gap: 5px;
     }
 }
+.banner{
+    width: 100%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.banner .buttonBox{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.banner .buttonBox button{
+    border-radius: 10px;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
 .main-title {
     display: flex;
     align-items: center;
