@@ -11,13 +11,13 @@ app.use('/assets', express.static(path.join(__dirname, '../assets')));
 
 // Serve index.html at "/"
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 app.get('/forum', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/forum.html'));
+  res.sendFile(path.join(__dirname, '../forum.html'));
 });
 app.get('/create', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/create.html'));
+  res.sendFile(path.join(__dirname, '../create.html'));
 });
 
 // MySQL connection
