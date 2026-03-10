@@ -67,7 +67,12 @@ html{
     width: 60%;
 }
 .banner .buttonBox button{
-    border-radius: 10px;
+    border-radius: 50px;
+    border: solid 0.05vw black;
+    width: 2vw;
+    height: 2vw;
+    min-width: 30px;
+    min-height: 30px;
 }
 @media (max-width: 600px) {
     .banner .buttonBox button{
