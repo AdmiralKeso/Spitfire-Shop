@@ -69,6 +69,11 @@ html{
 .banner .buttonBox button{
     border-radius: 10px;
 }
+@media (max-width: 600px) {
+    .banner .buttonBox button{
+        display: none;
+    }
+}
 .banner img{
     width: 100%;
     height: auto;
