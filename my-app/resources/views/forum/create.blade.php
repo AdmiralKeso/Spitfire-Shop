@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spitfire Shop</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
         padding: 0;
         color: rgb(0, 0, 0);
         border-top: solid 0.5vw #7c7c00;
-        background-image: url('assets/images/background/background.jpg');
+        background-image: url('../assets/images/background/background.jpg');
         background-size: cover;
         background-color: white;
     }
@@ -22,22 +22,22 @@
 </head>
 
 <body>
-    <img src="assets/images/background/spitfire-bannermain.jpg" alt="spitfire-banner" style="width: 100%; position: relative;">
+    <img src="../assets/images/background/spitfire-bannermain.jpg" alt="spitfire-banner" style="width: 100%; position: relative;">
 
     <header class="main-header">
         <div class="main-title">
-            <img src="assets/images/logo/logo.png" alt="Spitfire logo" style="width: 4vw;">
+            <img src="../assets/images/logo/logo.png" alt="Spitfire logo" style="width: 4vw;">
             <div id="head-title">
             <h1>Open Skies</h1>
             <p>Encyclopedia | Merch | Forum</p>
             </div>
         </div>
         <div id="menu-items">
-            <a class="item" href="index.html">Home</a>
+            <a class="item" href="{{ route('home') }}" style="text-decoration: underline;">Home</a>
             <a class="item">Gallery</a>
             <a class="item" href="https://shop.iwm.org.uk/collections/spitfire-clothing?srsltid=AfmBOoo-qoiJBwa1YP_qm4jPLXe5HnED7MspYuSpKVtRNtLR2jFDrpOj" target="_blank">Merch</a>
-            <a class="item" href="forum.html" style= "text-decoration: underline;">Forum</a>
-            <div class="item">Account</div>
+            <a class="item" href="{{ route('forum') }}">Forum</a>
+            <a class="item" href="{{ route('account') }}">Account</a>
             <a class="item">Other</a>
         </div>
     </header>
@@ -56,7 +56,7 @@
     <div id="create-section">
         <div class="content-row">
         <h2>Create a post</h2>
-        <a href="/forum" alt="Back to forum">Go back</a>
+        <a href="{{ route('forum') }}" alt="Back to forum">Go back</a>
         </div>
         <form id="create-form">
             <div class="content-row">
@@ -79,6 +79,6 @@
     </div>
 </section>
 </div>
-<script src="/assets/script/create-post.js"></script>
+<script src="../assets/script/create-post.js"></script>
 </body>
 </html>

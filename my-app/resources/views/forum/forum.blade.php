@@ -34,11 +34,11 @@
             </div>
         </div>
         <div id="menu-items">
-            <a class="item" href="index.html">Home</a>
+            <a class="item" href="{{ route('home') }}" style="text-decoration: underline;">Home</a>
             <a class="item">Gallery</a>
             <a class="item" href="https://shop.iwm.org.uk/collections/spitfire-clothing?srsltid=AfmBOoo-qoiJBwa1YP_qm4jPLXe5HnED7MspYuSpKVtRNtLR2jFDrpOj" target="_blank">Merch</a>
-            <a class="item" href="forum.html" style="text-decoration: underline;">Forum</a>
-            <div class="item">Account</div>
+            <a class="item" href="{{ route('forum') }}">Forum</a>
+            <a class="item" href="{{ route('account') }}">Account</a>
             <a class="item">Other</a>
         </div>
     </header>
@@ -57,7 +57,7 @@
     <div style="margin: 10px; background-color: antiquewhite;">
         <div class="content-row">
         <h2>Forums</h2>
-        <a href="/create" alt="Create forum">Create</a>
+        <a href="{{ route('create') }}" alt="Create forum">Create</a>
         </div>
         <div class="padding margin-item">Forum 1</div>
         <div class="padding margin-item">Forum 2</div>
