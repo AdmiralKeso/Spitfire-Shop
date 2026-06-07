@@ -1,3 +1,5 @@
+import { renderPost } from './render.js';
+
 const topicLinks   = document.querySelectorAll('.topic-item');
 const postsList    = document.getElementById('posts-list');
 const paginationEl = document.getElementById('posts-pagination');
