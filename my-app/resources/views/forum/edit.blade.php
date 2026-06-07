@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post — Spitfire Shop</title>
+    <title>Edit Post — Spitfire Shop</title>
     @vite(['resources/js/app.js'])
     <style>
         body {
@@ -56,35 +56,36 @@
     <div class="margin">
             <section id="create-section">
                 <div class="content-row">
-                    <h2>Create a post</h2>
-                    <a href="{{ route('forum') }}">Go back</a>
+                    <h2>Edit post</h2>
+                    <a href="{{ route('post.show', $post) }}">Go back</a>
                 </div>
 
-                <form id="create-form" method="POST" action="{{ route('post.store') }}">
+                <form id="edit-form" method="POST" action="{{ route('post.update', $post) }}">
                     @csrf
+                    @method('PUT')
 
                     <div class="content-column" style="gap: 0.5rem;">
-                        <input type="text" name="title" placeholder="Title" value="{{ old('title') }}" required style="padding: 0.4rem;">
+                        <input type="text" name="title" placeholder="Title" value="{{ old('title', $post->title) }}" required style="padding: 0.4rem;">
                         @error('title') <div style="color:red; font-size:0.8rem;">{{ $message }}</div> @enderror
 
                         <select name="genre" required style="padding: 0.4rem;">
-                            <option value="" disabled {{ old('genre') ? '' : 'selected' }}>Select genre</option>
+                            <option value="" disabled>Select genre</option>
                             @foreach (['General History','European History','Asian History','North American History','South American History'] as $g)
-                                <option value="{{ $g }}" {{ old('genre') === $g ? 'selected' : '' }}>{{ $g }}</option>
+                                <option value="{{ $g }}" {{ old('genre', $post->genre) === $g ? 'selected' : '' }}>{{ $g }}</option>
                             @endforeach
                         </select>
                         @error('genre') <div style="color:red; font-size:0.8rem;">{{ $message }}</div> @enderror
 
                         <textarea name="description" style="resize: none; padding: 0.4rem;" rows="2"
                             placeholder="Short description (max 300 characters)..." maxlength="300"
-                            required>{{ old('description') }}</textarea>
+                            required>{{ old('description', $post->description) }}</textarea>
                         @error('description') <div style="color:red; font-size:0.8rem;">{{ $message }}</div> @enderror
 
                         <textarea name="content" style="resize: vertical; padding: 0.4rem;" rows="10"
-                            placeholder="Post content..." required>{{ old('content') }}</textarea>
+                            placeholder="Post content..." required>{{ old('content', $post->content) }}</textarea>
                         @error('content') <div style="color:red; font-size:0.8rem;">{{ $message }}</div> @enderror
 
-                        <input type="submit" value="Create post" style="padding: 0.4rem 1rem; cursor: pointer; width: fit-content;">
+                        <input type="submit" value="Save changes" style="padding: 0.4rem 1rem; cursor: pointer; width: fit-content;">
                     </div>
                 </form>
         </section>
