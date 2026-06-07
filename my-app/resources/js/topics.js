@@ -38,3 +38,37 @@ function renderPaginationBtns(total) {
         btn.addEventListener('click', () => showPage(parseInt(btn.dataset.page)));
     });
 }
+
+// Init pagination on page load
+document.addEventListener('DOMContentLoaded', () => {
+    if (postsList) showPage(1);
+});
+
+// Topic filter
+topicLinks.forEach(link => {
+    link.addEventListener('click', async function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        topicLinks.forEach(t => t.classList.remove('topic-item-active'));
+        this.classList.add('topic-item-active');
+        history.pushState({}, '', this.href);
+
+        try {
+            const res  = await fetch(this.href, { headers: { 'Accept': 'application/json' } });
+            const data = await res.json();
+            postsList.innerHTML = '';
+            if (data.posts.length) {
+                data.posts.forEach(p => postsList.appendChild(renderPost(p, data.csrf, data.is_guest, data.account_url)));
+            } else {
+                const msg = document.createElement('p');
+                msg.style.color  = '#888';
+                msg.textContent  = 'No posts yet. Be the first to create one!';
+                postsList.appendChild(msg);
+            }
+            showPage(1);
+        } catch {
+            window.location.href = this.href;
+        }
+    });
+});
