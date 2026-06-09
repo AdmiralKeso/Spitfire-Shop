@@ -54,9 +54,42 @@ class MainController
     {
         return view('forum.create');
     }
-    public function account()
+
+    public function showPost(Post $post)
     {
-        return view('auth.acc');
+        $comments = $post->comments()->get();
+        return view('forum.show', compact('post', 'comments'));
+    }
+
+    public function editPost(Post $post)
+    {
+        abort_if(Auth::id() !== $post->user_id, 403);
+        return view('forum.edit', compact('post'));
+    }
+
+    public function updatePost(Request $request, Post $post)
+    {
+        abort_if(Auth::id() !== $post->user_id, 403);
+
+        $request->validate([
+            'title'       => 'required|string|max:255',
+            'genre'       => 'required|string|max:255',
+            'description' => 'required|string|max:300',
+            'content'     => 'required|string',
+        ]);
+
+        $post->update($request->only('title', 'genre', 'description', 'content'));
+
+        return redirect()->route('post.show', $post)->with('success', 'Post updated!');
+    }
+
+    public function destroyPost(Post $post)
+    {
+        abort_if(Auth::id() !== $post->user_id, 403);
+        $post->delete();
+        return redirect()->route('forum')->with('success', 'Post deleted.');
+    }
+
     public function votePost(Request $request, Post $post)
     {
         $request->validate(['vote' => 'required|in:1,-1']);
