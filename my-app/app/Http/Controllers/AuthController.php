@@ -49,3 +49,25 @@ class AuthController
             ->withInput($request->only('email'))
             ->with('tab', 'login');
     }
+
+    public function updateSettings(Request $request)
+    {
+        $user = Auth::user();
+
+        $request->validate([
+            'name'     => 'required|string|max:255|unique:users,name,' . $user->id,
+            'email'    => 'required|email|max:255|unique:users,email,' . $user->id,
+            'password' => 'nullable|min:8|confirmed',
+        ]);
+
+        $user->name  = $request->name;
+        $user->email = $request->email;
+
+        if ($request->filled('password')) {
+            $user->password = $request->password;
+        }
+
+        $user->save();
+
+        return redirect()->route('account')->with('success', 'Settings saved.');
+    }
