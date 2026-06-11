@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MainController
 {
@@ -101,6 +102,14 @@ class MainController
             'userVote' => $post->userVote(),
         ]);
     }
+
+    public function commentPost(Request $request, Post $post)
+    {
+        $request->validate(['body' => 'required|string|max:300']);
+        $post->addComment(Auth::id(), $request->body);
+        return back();
+    }
+
     public function storePost(Request $request)
     {
         $request->validate([
