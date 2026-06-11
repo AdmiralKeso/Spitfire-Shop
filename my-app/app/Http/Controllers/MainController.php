@@ -101,5 +101,27 @@ class MainController
             'userVote' => $post->userVote(),
         ]);
     }
+    public function storePost(Request $request)
+    {
+        $request->validate([
+            'title'       => 'required|string|max:255',
+            'genre'       => 'required|string|max:255',
+            'description' => 'required|string|max:300',
+            'content'     => 'required|string',
+        ]);
+
+        Post::create([
+            'user_id'     => Auth::id(),
+            'title'       => $request->title,
+            'genre'       => $request->genre,
+            'description' => $request->description,
+            'content'     => $request->content,
+        ]);
+
+        if ($request->expectsJson()) {
+            return response()->json(['redirect' => route('forum')]);
+        }
+
+        return redirect()->route('forum')->with('success', 'Post created!');
     }
 }
