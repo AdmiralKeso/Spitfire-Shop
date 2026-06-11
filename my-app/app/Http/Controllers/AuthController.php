@@ -38,6 +38,7 @@ class AuthController
 
         if (Auth::attempt(
             ['email' => $request->email, 'password' => $request->password],
+            $request->boolean('remember')
         )) {
             $request->session()->regenerate();
             return redirect()->intended(route('forum'));
