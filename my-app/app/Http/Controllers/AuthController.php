@@ -12,3 +12,19 @@ class AuthController
     {
         return view('auth.acc');
     }
+
+    public function register(Request $request)
+    {
+        $request->validateWithBag('register', [
+            'name'     => 'required|string|max:255|unique:users,name',
+            'email'    => 'required|email|max:255|unique:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+        $user = User::create($request->only(['name', 'email', 'password']));
+
+        Auth::login($user);
+
+        return redirect()->route('account')
+            ->with('success', 'Welcome, ' . $user->name . '! Your account has been created.');
+    }
