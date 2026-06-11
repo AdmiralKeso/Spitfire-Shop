@@ -28,3 +28,23 @@ class AuthController
         return redirect()->route('account')
             ->with('success', 'Welcome, ' . $user->name . '! Your account has been created.');
     }
+
+    public function login(Request $request)
+    {
+        $request->validateWithBag('login', [
+            'email'    => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt(
+            ['email' => $request->email, 'password' => $request->password],
+        )) {
+            $request->session()->regenerate();
+            return redirect()->intended(route('forum'));
+        }
+
+        return back()
+            ->withErrors(['email' => 'These credentials do not match our records.'], 'login')
+            ->withInput($request->only('email'))
+            ->with('tab', 'login');
+    }
