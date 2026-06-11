@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\AuthController;
 
 //Main controller routes
 Route::get('/', [MainController::class, 'index'])->name('home');
@@ -14,3 +15,10 @@ Route::post('/forum/{post}/comment', [MainController::class, 'commentPost'])->na
 Route::get('/forum/{post}/edit', [MainController::class, 'editPost'])->name('post.edit')->middleware('auth');
 Route::put('/forum/{post}', [MainController::class, 'updatePost'])->name('post.update')->middleware('auth');
 Route::delete('/forum/{post}', [MainController::class, 'destroyPost'])->name('post.destroy')->middleware('auth');
+
+//Auth controller routes
+Route::get('/account', [AuthController::class, 'showAccount'])->name('account');
+Route::post('/account/register', [AuthController::class, 'register'])->name('register');
+Route::post('/account/login', [AuthController::class, 'login'])->name('login');
+Route::post('/account/settings', [AuthController::class, 'updateSettings'])->name('settings');
+Route::post('/account/logout', [AuthController::class, 'logout'])->name('logout');
